@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #e7edf8; background: #070d1b; }
+body { margin: 0; min-width: 320px; background: #070d1b; }
+
+/* Additional utility styles for nice UI visual feedback */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glassmorphism-dark {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.shadow-premium {
+  box-shadow: 0 4px 20px -2px rgba(12, 141, 231, 0.05), 0 2px 12px -4px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 10px 30px -4px rgba(12, 141, 231, 0.08), 0 4px 16px -6px rgba(0, 0, 0, 0.04);
+}
+
+@layer components {
+  .brand-mark {
+    display: inline-flex;
+    height: 3.25rem;
+    width: 3.25rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, #0c8de7, #4f46e5);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    box-shadow: 0 12px 24px -4px rgba(12, 141, 231, 0.35);
+  }
+
+  .brand-mark-sm {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  .brand-mark-xs {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.7rem;
+    font-size: 0.7rem;
+  }
+}
+
+@layer utilities {
+  .h-4\.5 { height: 1.125rem; }
+  .w-4\.5 { width: 1.125rem; }
+  .h-8\.5 { height: 2.125rem; }
+  .w-8\.5 { width: 2.125rem; }
+}
+
+.professional-photo { background-size: cover; background-position: center; }
+
+/* A unified, high-contrast operations canvas for every role workspace. */
+.dashboard-readable {
+  background: radial-gradient(circle at 82% -12%, rgba(14, 165, 233, .15), transparent 28rem), radial-gradient(circle at 18% 105%, rgba(79, 70, 229, .12), transparent 30rem), #070d1b !important;
+}
+.dashboard-readable [class*="bg-slate-950"] { background-color: #090f20 !important; }
+.dashboard-readable [class*="bg-slate-900"] { background-color: #101a30 !important; }
+.dashboard-readable [class*="border-slate-900"] { border-color: rgba(71, 85, 105, .34) !important; }
+.dashboard-readable [class*="border-slate-800"] { border-color: rgba(71, 85, 105, .56) !important; }
+.dashboard-readable [class*="text-slate-200"] { color: #e8effb !important; }
+.dashboard-readable [class*="text-slate-300"] { color: #c8d4e8 !important; }
+.dashboard-readable [class*="text-slate-400"] { color: #9caec8 !important; }
+.dashboard-readable [class*="text-slate-500"] { color: #7183a0 !important; }
+.dashboard-readable [class*="text-slate-900"] { color: #e8effb !important; }
+.dashboard-readable input, .dashboard-readable textarea { color: #e8effb !important; }
+/* Readability-first visual refresh */
+.dashboard-readable {
+  background: #f5f7fb !important;
+  color: #172033 !important;
+}
+.dashboard-readable [class*="bg-slate-950"] { background-color: #f5f7fb !important; }
+.dashboard-readable [class*="bg-slate-900"] { background-color: #ffffff !important; }
+.dashboard-readable [class*="bg-slate-800"] { background-color: #eef2f7 !important; }
+.dashboard-readable [class*="border-slate-900"], .dashboard-readable [class*="border-slate-800"], .dashboard-readable [class*="border-slate-700"] { border-color: #d9e1ec !important; }
+.dashboard-readable [class*="text-slate-100"], .dashboard-readable [class*="text-slate-200"], .dashboard-readable [class*="text-slate-300"], .dashboard-readable [class*="text-slate-900"] { color: #172033 !important; }
+.dashboard-readable [class*="text-slate-400"] { color: #44536a !important; }
+.dashboard-readable [class*="text-slate-500"], .dashboard-readable [class*="text-slate-600"] { color: #65758c !important; }
+.dashboard-readable input, .dashboard-readable textarea, .dashboard-readable select { background: #fff !important; border-color: #cfd8e5 !important; color: #172033 !important; }
+.dashboard-readable .text-\[9px\] { font-size: .75rem !important; line-height: 1.1rem !important; }
+.dashboard-readable .text-\[10px\] { font-size: .8rem !important; line-height: 1.2rem !important; }
+.dashboard-readable .text-\[11px\] { font-size: .86rem !important; line-height: 1.28rem !important; }
+.dashboard-readable .text-xs { font-size: .9rem !important; line-height: 1.35rem !important; }
+.dashboard-readable .text-sm { font-size: 1rem !important; line-height: 1.5rem !important; }
+
+.auth-page { background: #eef3f8 !important; color: #172033; }
+.auth-page .auth-visual { background-color: #0c1f3d !important; background-position: center !important; }
+.auth-page .auth-form-side { background: #f6f8fb !important; }
+.auth-page .auth-form-side [class*="bg-slate-900"] { background: #ffffff !important; }
+.auth-page .auth-form-side [class*="bg-slate-950"] { background: #f8fafc !important; }
+.auth-page .auth-form-side [class*="border-slate-800"] { border-color: #d8e0ea !important; }
+.auth-page .auth-form-side [class*="text-white"], .auth-page .auth-form-side [class*="text-slate-200"] { color: #172033 !important; }
+.auth-page .auth-form-side [class*="text-slate-400"], .auth-page .auth-form-side [class*="text-slate-500"] { color: #64748b !important; }
+.auth-page .auth-form-side input, .auth-page .auth-form-side select { background: #fff !important; color: #172033 !important; border-color: #cfd8e5 !important; }
+.auth-page .auth-form-side label { color: #334155 !important; }
+.auth-page .text-\[9px\] { font-size: .76rem !important; }
+
+.dashboard-readable h1 { font-size: 1.7rem !important; line-height: 2.15rem !important; letter-spacing: -.025em !important; text-transform: none !important; }
+.dashboard-readable h2 { font-size: 1.22rem !important; line-height: 1.7rem !important; }
+.dashboard-readable button { min-height: 2.5rem; }
+.landing-header { border-color: rgba(148, 163, 184, .2) !important; background: rgba(7, 13, 27, .92) !important; }
+.landing-header nav a { font-size: .9rem !important; letter-spacing: .01em !important; text-transform: none !important; }
+.landing-footer { border-color: rgba(148, 163, 184, .18) !important; }

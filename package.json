@@ -1,0 +1,9 @@
+{
+  "name": "ai-customer-support-root",
+  "version": "1.0.0",
+  "description": "Root workspace to launch both the customer support frontend and backend",
+  "scripts": {
+    "dev": "node run-dev.js"
+  },
+  "private": true
+}
