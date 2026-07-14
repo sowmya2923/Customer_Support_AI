@@ -40,7 +40,8 @@ const getSuggestedReply = async (req, res) => {
     // Step 2: Feed ticket details and KB context into AI engine
     const aiResponse = await suggestReply(
       { title: ticket.title, description: ticket.description },
-      matchingArticles
+      matchingArticles,
+      ticket.customerTier || 'free'
     );
 
     return res.json({
@@ -58,3 +59,5 @@ const getSuggestedReply = async (req, res) => {
 module.exports = {
   getSuggestedReply,
 };
+
+

@@ -88,7 +88,7 @@ export default function Landing() {
 
       {/* Header */}
       <header className="landing-header sticky top-0 z-50 border-b border-slate-900 bg-slate-950/80 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-[90rem] mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="brand-mark brand-mark-sm">SD</span>
             <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-brand-400 via-indigo-400 to-brand-400 bg-clip-text text-transparent">
@@ -135,13 +135,13 @@ export default function Landing() {
       {/* Hero Section */}
       <section className="relative min-h-[720px] flex flex-col items-center justify-center px-6 pt-20 pb-24 text-center overflow-hidden professional-photo" style={{ backgroundImage: `linear-gradient(rgba(2,6,23,0.78), rgba(2,6,23,0.94)), url(${operationsHero})` }}>
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
+        <div className="relative z-10 max-w-[90rem] mx-auto flex flex-col items-center">
         <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-xl sm:rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-[11px] sm:text-xs font-bold uppercase tracking-wide sm:tracking-wider mb-6 animate-fade-in-up">
           <Sparkles className="h-3.5 w-3.5 text-brand-400 animate-pulse" />
           <span className="leading-snug text-center">Next-Gen Helpdesk Engine Powered by SupportDesk AI</span>
         </div>
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-white max-w-5xl leading-[1.1] mb-6 animate-fade-in-up">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-white max-w-6xl leading-[1.1] mb-6 animate-fade-in-up">
           Automate Support with <span className="bg-gradient-to-r from-brand-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Contextual Intelligence</span>
         </h1>
 
@@ -189,7 +189,7 @@ export default function Landing() {
 
       {/* Feature Grid */}
       <section id="features" className="bg-slate-950 border-t border-b border-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[90rem] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
             <span className="text-xs font-bold tracking-widest text-brand-400 uppercase">Core Capabilities</span>
             <h2 className="text-3xl font-extrabold text-white tracking-tight">Everything You Need for Elite Customer Operations</h2>
@@ -234,7 +234,7 @@ export default function Landing() {
       </section>
 
       <section className="border-y border-slate-800 bg-slate-900/45">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-800 px-6 md:grid-cols-4">
+        <div className="mx-auto grid max-w-[90rem] grid-cols-2 divide-x divide-slate-800 px-6 md:grid-cols-4">
           {[["24/7", "Always-on service"], ["3 min", "Average first response"], ["18", "Markets supported"], ["99.99%", "Workflow uptime"]].map(([value, label]) => (
             <div key={label} className="py-6 text-center sm:py-7"><p className="text-lg font-black text-white">{value}</p><p className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500">{label}</p></div>
           ))}
@@ -242,13 +242,13 @@ export default function Landing() {
       </section>
 
       <section className="border-b border-slate-900 bg-slate-950 py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid max-w-[90rem] items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
           <div className="relative overflow-hidden rounded-lg border border-slate-800 bg-slate-900 shadow-2xl"><img src={agentLogin} alt="Support specialist reviewing a customer request" className="h-[330px] w-full object-cover sm:h-[430px]" /><div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" /><div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8"><p className="text-xs font-bold uppercase tracking-widest text-brand-300">Support signal</p><p className="mt-1 text-2xl font-black text-white">Every conversation has context.</p></div></div>
           <div><span className="text-xs font-bold uppercase tracking-widest text-brand-400">Built for the handoff</span><h2 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">Give every team the same clear picture.</h2><p className="mt-5 max-w-xl text-sm leading-7 text-slate-400">Customers get a calm, transparent support experience. Agents get the history and drafting tools to act quickly. Leaders see where attention is needed before service quality slips.</p><div className="mt-8 space-y-4">{[['Customer desk', 'Track each request, reply in context, and rate the outcome.'], ['Agent workspace', 'Prioritize the queue with AI-assisted drafts and knowledge matches.'], ['Manager command center', 'Watch SLA health, sentiment, workload, and team impact in one view.']].map(([title, body], index) => (<div key={title} className="flex gap-4 border-l-2 border-slate-700 py-1 pl-4 transition-colors hover:border-brand-400"><span className="mt-0.5 text-xs font-black text-brand-400">0{index + 1}</span><div><h3 className="text-sm font-bold text-white">{title}</h3><p className="mt-1 text-xs leading-5 text-slate-500">{body}</p></div></div>))}</div></div>
         </div>
       </section>
       {/* Interactive Workflow Simulation */}
-      <section id="preview" className="max-w-7xl mx-auto px-6 py-20">
+      <section id="preview" className="max-w-[90rem] mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="text-xs font-bold tracking-widest text-indigo-400 uppercase">Live Walkthrough</span>
           <h2 className="text-3xl font-extrabold text-white tracking-tight">Experience SupportDesk AI in Action</h2>
@@ -384,7 +384,7 @@ export default function Landing() {
 
       {/* Testimonials */}
       <section id="testimonials" className="bg-slate-900/30 border-t border-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-[90rem] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
             <span className="text-xs font-bold tracking-widest text-brand-400 uppercase">Customer Success</span>
             <h2 className="text-3xl font-extrabold text-white tracking-tight">Endorsed by Leading Teams</h2>
@@ -450,17 +450,18 @@ export default function Landing() {
       </section>
 
       <footer className="landing-footer mt-auto border-t border-slate-800 bg-[#070d1d] text-slate-500">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mx-auto grid max-w-[90rem] gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2"><div className="flex items-center gap-2.5"><span className="brand-mark brand-mark-xs border border-slate-700 bg-slate-900">SD</span><span className="text-lg font-bold tracking-tight text-white">SupportDesk<span className="font-medium text-brand-400">.ai</span></span></div><p className="mt-5 max-w-sm text-sm leading-6 text-slate-400">A clearer, calmer way for customers, support teams, and leaders to resolve what matters.</p><div className="mt-6 flex items-center gap-2 text-xs font-semibold text-emerald-400"><span className="h-2 w-2 rounded-full bg-emerald-400" />All systems operational</div></div>
           <div><h3 className="text-xs font-bold uppercase tracking-widest text-white">Product</h3><div className="mt-4 space-y-3 text-sm"><a href="#features" className="block hover:text-white">Capabilities</a><a href="#preview" className="block hover:text-white">Workflow demo</a><Link to="/kb" className="block hover:text-white">Knowledge hub</Link></div></div>
           <div><h3 className="text-xs font-bold uppercase tracking-widest text-white">Workspace</h3><div className="mt-4 space-y-3 text-sm"><Link to="/login" className="block hover:text-white">Sign in</Link><Link to="/register" className="block hover:text-white">Create account</Link><a href="#testimonials" className="block hover:text-white">Customer stories</a></div></div>
           <div><h3 className="text-xs font-bold uppercase tracking-widest text-white">Built with care</h3><p className="mt-4 text-sm leading-6">Secure roles, intelligent routing, and responsive workspaces for every support moment.</p></div>
         </div>
-        <div className="border-t border-slate-800"><div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-xs sm:flex-row sm:items-center sm:justify-between"><p>&copy; {new Date().getFullYear()} SupportDesk.ai. All rights reserved.</p><p>Customer operations, made more human.</p></div></div>
+        <div className="border-t border-slate-800"><div className="mx-auto flex max-w-[90rem] flex-col gap-3 px-6 py-5 text-xs sm:flex-row sm:items-center sm:justify-between"><p>&copy; {new Date().getFullYear()} SupportDesk.ai. All rights reserved.</p><p>Customer operations, made more human.</p></div></div>
       </footer>
     </div>
   );
 }
+
 
 
 

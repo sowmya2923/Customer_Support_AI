@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTickets } from '../hooks/useTickets';
 import { useMessages } from '../hooks/useMessages';
 import { useAuth } from '../context/AuthContext';
@@ -210,10 +210,10 @@ export default function AgentWorkspace() {
     }
 
     if (dept === 'finance') {
-      setTimeout(() => addLog("âš¡ Stripe Gateway initialized..."), 300);
-      setTimeout(() => addLog("ðŸ” Matching invoice duplicate ID #INV-8832..."), 805);
-      setTimeout(() => addLog("ðŸ’µ Billing Transaction verified ($29.00 billing error)."), 1300);
-      setTimeout(() => addLog("âœ… Refund successfully posted via Stripe. Ref: REF_STRIPE_98321"), 1800);
+      setTimeout(() => addLog("⚡ Stripe Gateway initialized..."), 300);
+      setTimeout(() => addLog("🔍 Matching invoice duplicate ID #INV-8832..."), 805);
+      setTimeout(() => addLog("💵 Billing Transaction verified ($29.00 billing error)."), 1300);
+      setTimeout(() => addLog("✅ Refund successfully posted via Stripe. Ref: REF_STRIPE_98321"), 1800);
       setTimeout(async () => {
         setActionSuccess(true);
         setIsActionExecuting(false);
@@ -224,10 +224,10 @@ export default function AgentWorkspace() {
       }, 2300);
     } 
     else if (dept === 'engineering') {
-      setTimeout(() => addLog("ðŸš€ Connecting to AWS EC2 Cluster..."), 300);
-      setTimeout(() => addLog("ðŸ”Œ Flushing Active Connection socket pool (port 5005)..."), 805);
-      setTimeout(() => addLog("ðŸ§¹ Invaliding Redis Auth Tokens Cache..."), 1300);
-      setTimeout(() => addLog("ðŸŸ¢ Node restarted successfully. Server State: 200 OK (Healthy)."), 1800);
+      setTimeout(() => addLog("🚀 Connecting to AWS EC2 Cluster..."), 300);
+      setTimeout(() => addLog("🔌 Flushing Active Connection socket pool (port 5005)..."), 805);
+      setTimeout(() => addLog("🧹 Invaliding Redis Auth Tokens Cache..."), 1300);
+      setTimeout(() => addLog("🟢 Node restarted successfully. Server State: 200 OK (Healthy)."), 1800);
       setTimeout(async () => {
         setActionSuccess(true);
         setIsActionExecuting(false);
@@ -236,10 +236,10 @@ export default function AgentWorkspace() {
       }, 2300);
     }
     else if (dept === 'qa') {
-      setTimeout(() => addLog("ðŸ¤– Initializing Headless QA Chrome Instance..."), 300);
-      setTimeout(() => addLog("ðŸ§ª Running E2E User Authentication Specs... (PASSED)"), 805);
-      setTimeout(() => addLog("ðŸ§ª Running E2E API Ticket Creation Specs... (PASSED)"), 1300);
-      setTimeout(() => addLog("ðŸ§ª Running CSAT rating post-validation specs... (PASSED)"), 1800);
+      setTimeout(() => addLog("🤖 Initializing Headless QA Chrome Instance..."), 300);
+      setTimeout(() => addLog("🧪 Running E2E User Authentication Specs... (PASSED)"), 805);
+      setTimeout(() => addLog("🧪 Running E2E API Ticket Creation Specs... (PASSED)"), 1300);
+      setTimeout(() => addLog("🧪 Running CSAT rating post-validation specs... (PASSED)"), 1800);
       setTimeout(async () => {
         setActionSuccess(true);
         setIsActionExecuting(false);
@@ -248,10 +248,10 @@ export default function AgentWorkspace() {
       }, 2300);
     }
     else if (dept === 'product') {
-      setTimeout(() => addLog("ðŸ”— Initiating Atlassian Jira Cloud Integration..."), 300);
-      setTimeout(() => addLog("âœï¸ Compiling feature request criteria & sentiment..."), 805);
-      setTimeout(() => addLog("ðŸ“‚ Jira Backlog issue registered: Issue Key: CD-89201"), 1300);
-      setTimeout(() => addLog("âœ… Priority queue initialized to high-priority sprint backlog."), 1850);
+      setTimeout(() => addLog("🔗 Initiating Atlassian Jira Cloud Integration..."), 300);
+      setTimeout(() => addLog("✍️ Compiling feature request criteria & sentiment..."), 805);
+      setTimeout(() => addLog("📂 Jira Backlog issue registered: Issue Key: CD-89201"), 1300);
+      setTimeout(() => addLog("✅ Priority queue initialized to high-priority sprint backlog."), 1850);
       setTimeout(async () => {
         setActionSuccess(true);
         setIsActionExecuting(false);
@@ -261,8 +261,8 @@ export default function AgentWorkspace() {
     }
     else {
       // support/general
-      setTimeout(() => addLog("âœï¸ Formatting support closure summary..."), 500);
-      setTimeout(() => addLog("âœ… Support SLA criteria achieved. Dispatching CSAT poll..."), 1200);
+      setTimeout(() => addLog("✍️ Formatting support closure summary..."), 500);
+      setTimeout(() => addLog("✅ Support SLA criteria achieved. Dispatching CSAT poll..."), 1200);
       setTimeout(async () => {
         setActionSuccess(true);
         setIsActionExecuting(false);
@@ -355,21 +355,21 @@ export default function AgentWorkspace() {
         <div className="p-4 border-b border-slate-900 bg-slate-950/85 space-y-3">
           <h2 className="text-sm font-extrabold text-white uppercase tracking-wide">Agent Workspace Queue</h2>
           
-          <div className="flex rounded-xl bg-slate-900 p-0.5 border border-slate-800 shadow-inner">
+          <div className="grid grid-cols-2 gap-1 rounded-xl bg-slate-900 p-1 border border-slate-800 shadow-inner sm:grid-cols-5">
             {['', 'ai-reviewed', 'assigned', 'in-progress', 'resolved'].map((status) => (
               <button
-                key={status || 'active'}
+                key={status ? status.replace('-', ' ') : 'active'}
                 onClick={() => {
                   setStatusFilter(status);
                   setSelectedTicketId(null);
                 }}
-                className={`flex-1 py-1.5 text-[10px] font-bold uppercase tracking-widest rounded-lg cursor-pointer transition-all ${
+                className={`min-h-[44px] min-w-0 px-1 py-1.5 text-[10px] font-bold uppercase leading-tight tracking-wide rounded-lg cursor-pointer transition-all ${
                   statusFilter === status
                     ? 'bg-slate-800 text-brand-400 border border-slate-800 shadow-sm font-extrabold'
                     : 'text-slate-500 hover:text-slate-300'
                 }`}
               >
-                {status || 'active'}
+                {status ? status.replace('-', ' ') : 'active'}
               </button>
             ))}
           </div>
@@ -446,7 +446,7 @@ export default function AgentWorkspace() {
                 <h2 className="text-xs font-extrabold text-white leading-tight">{activeTicket.title}</h2>
                 <div className="flex items-center gap-2 mt-1 text-[11px] text-slate-400">
                   <span>Customer: <strong className="text-white">{activeTicket.customer?.name}</strong> ({activeTicket.customer?.email})</span>
-                  <span>â€¢</span>
+                  <span>•</span>
                   {getTierIndicator(activeTicket.customerTier)}
                 </div>
               </div>
@@ -871,7 +871,7 @@ export default function AgentWorkspace() {
                       
                       <div className="flex items-center gap-1 font-mono text-[9px] font-bold text-slate-500 uppercase">
                         <span>{log.user?.name}</span>
-                        <span>â€¢</span>
+                        <span>•</span>
                         <span>{new Date(log.createdAt).toLocaleDateString()}</span>
                       </div>
                       <p className="text-[10px] text-slate-400 mt-0.5 leading-normal">
@@ -894,6 +894,7 @@ export default function AgentWorkspace() {
     </div>
   );
 }
+
 
 
 

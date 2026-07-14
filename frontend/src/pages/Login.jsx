@@ -98,7 +98,7 @@ export default function Login() {
     <div className="auth-page flex min-h-screen bg-slate-950 text-slate-200 overflow-hidden font-sans relative">
       
       {/* LEFT PANEL: High impact visual panel (spacious layout) */}
-      <div className="auth-visual hidden lg:relative lg:flex lg:w-1/2 flex-col justify-between p-16 bg-slate-900 border-r border-slate-950 text-white overflow-hidden professional-photo" style={{ backgroundImage: `linear-gradient(rgba(2,6,23,0.80), rgba(2,6,23,0.94)), url(${authImage})` }}>
+      <div className="auth-visual hidden lg:relative lg:flex lg:w-[55%] flex-col justify-between p-12 xl:p-16 bg-slate-900 border-r border-slate-950 text-white overflow-hidden professional-photo" style={{ backgroundImage: `linear-gradient(rgba(2,6,23,0.80), rgba(2,6,23,0.94)), url(${authImage})` }}>
         {/* Neon Glow spots */}
         <div className="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] rounded-full bg-brand-500/10 blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-10%] right-[-10%] h-[600px] w-[600px] rounded-full bg-indigo-500/10 blur-[140px] pointer-events-none" />
@@ -126,6 +126,11 @@ export default function Login() {
             </p>
           </div>
 
+          <div className="grid grid-cols-3 gap-3 border-t border-white/10 pt-6">
+            <div><p className="text-lg font-black text-white">24/7</p><p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Coverage</p></div>
+            <div><p className="text-lg font-black text-white">3 min</p><p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">First reply</p></div>
+            <div><p className="text-lg font-black text-white">99.9%</p><p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">SLA health</p></div>
+          </div>
           {/* Customer Reviews inside visual panel */}
           <div className="bg-slate-950/40 border border-slate-800/80 p-6 sm:p-8 rounded-3xl space-y-4">
             <div className="flex items-center gap-1 text-amber-400">
@@ -147,7 +152,7 @@ export default function Login() {
       </div>
 
       {/* RIGHT PANEL: Elegant, spacious Access Form Section (Dark Mode) */}
-      <div className="auth-form-side w-full lg:w-1/2 flex flex-col justify-center items-center px-6 py-12 md:px-16 bg-slate-950 relative">
+      <div className="auth-form-side w-full lg:w-[45%] flex flex-col justify-center items-center px-6 py-12 md:px-16 bg-slate-950 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-950/20 via-slate-950 to-slate-950 pointer-events-none" />
 
         <div className="w-full max-w-xl z-10 space-y-6">
@@ -426,6 +431,7 @@ export default function Login() {
     </div>
   );
 }
+
 
 
 
