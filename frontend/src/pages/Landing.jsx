@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import operationsHero from '../assets/supportdesk-operations-hero.png';
+import agentLogin from '../assets/supportdesk-agent-login.png';
 import { 
   Sparkles, 
   ArrowRight, 
@@ -232,6 +233,20 @@ export default function Landing() {
         </div>
       </section>
 
+      <section className="border-y border-slate-800 bg-slate-900/45">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-800 px-6 md:grid-cols-4">
+          {[["24/7", "Always-on service"], ["3 min", "Average first response"], ["18", "Markets supported"], ["99.99%", "Workflow uptime"]].map(([value, label]) => (
+            <div key={label} className="py-6 text-center sm:py-7"><p className="text-lg font-black text-white">{value}</p><p className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500">{label}</p></div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-b border-slate-900 bg-slate-950 py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
+          <div className="relative overflow-hidden rounded-lg border border-slate-800 bg-slate-900 shadow-2xl"><img src={agentLogin} alt="Support specialist reviewing a customer request" className="h-[330px] w-full object-cover sm:h-[430px]" /><div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" /><div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8"><p className="text-xs font-bold uppercase tracking-widest text-brand-300">Support signal</p><p className="mt-1 text-2xl font-black text-white">Every conversation has context.</p></div></div>
+          <div><span className="text-xs font-bold uppercase tracking-widest text-brand-400">Built for the handoff</span><h2 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">Give every team the same clear picture.</h2><p className="mt-5 max-w-xl text-sm leading-7 text-slate-400">Customers get a calm, transparent support experience. Agents get the history and drafting tools to act quickly. Leaders see where attention is needed before service quality slips.</p><div className="mt-8 space-y-4">{[['Customer desk', 'Track each request, reply in context, and rate the outcome.'], ['Agent workspace', 'Prioritize the queue with AI-assisted drafts and knowledge matches.'], ['Manager command center', 'Watch SLA health, sentiment, workload, and team impact in one view.']].map(([title, body], index) => (<div key={title} className="flex gap-4 border-l-2 border-slate-700 py-1 pl-4 transition-colors hover:border-brand-400"><span className="mt-0.5 text-xs font-black text-brand-400">0{index + 1}</span><div><h3 className="text-sm font-bold text-white">{title}</h3><p className="mt-1 text-xs leading-5 text-slate-500">{body}</p></div></div>))}</div></div>
+        </div>
+      </section>
       {/* Interactive Workflow Simulation */}
       <section id="preview" className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
@@ -434,24 +449,19 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="landing-footer bg-slate-950 text-slate-500 py-12 mt-auto border-t border-slate-900">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2.5">
-            <span className="brand-mark brand-mark-xs bg-slate-900 border border-slate-800">SD</span>
-            <span className="text-lg font-bold tracking-tight text-white">
-              SupportDesk<span className="text-slate-500 font-medium">.ai</span>
-            </span>
-          </div>
-
-          <p className="text-xs">
-            &copy; {new Date().getFullYear()} SupportDesk.ai Inc. All rights reserved. Powered by SupportDesk AI.
-          </p>
+      <footer className="landing-footer mt-auto border-t border-slate-800 bg-[#070d1d] text-slate-500">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="lg:col-span-2"><div className="flex items-center gap-2.5"><span className="brand-mark brand-mark-xs border border-slate-700 bg-slate-900">SD</span><span className="text-lg font-bold tracking-tight text-white">SupportDesk<span className="font-medium text-brand-400">.ai</span></span></div><p className="mt-5 max-w-sm text-sm leading-6 text-slate-400">A clearer, calmer way for customers, support teams, and leaders to resolve what matters.</p><div className="mt-6 flex items-center gap-2 text-xs font-semibold text-emerald-400"><span className="h-2 w-2 rounded-full bg-emerald-400" />All systems operational</div></div>
+          <div><h3 className="text-xs font-bold uppercase tracking-widest text-white">Product</h3><div className="mt-4 space-y-3 text-sm"><a href="#features" className="block hover:text-white">Capabilities</a><a href="#preview" className="block hover:text-white">Workflow demo</a><Link to="/kb" className="block hover:text-white">Knowledge hub</Link></div></div>
+          <div><h3 className="text-xs font-bold uppercase tracking-widest text-white">Workspace</h3><div className="mt-4 space-y-3 text-sm"><Link to="/login" className="block hover:text-white">Sign in</Link><Link to="/register" className="block hover:text-white">Create account</Link><a href="#testimonials" className="block hover:text-white">Customer stories</a></div></div>
+          <div><h3 className="text-xs font-bold uppercase tracking-widest text-white">Built with care</h3><p className="mt-4 text-sm leading-6">Secure roles, intelligent routing, and responsive workspaces for every support moment.</p></div>
         </div>
+        <div className="border-t border-slate-800"><div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-xs sm:flex-row sm:items-center sm:justify-between"><p>&copy; {new Date().getFullYear()} SupportDesk.ai. All rights reserved.</p><p>Customer operations, made more human.</p></div></div>
       </footer>
     </div>
   );
 }
+
 
 
 

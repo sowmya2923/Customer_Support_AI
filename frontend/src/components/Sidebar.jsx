@@ -12,7 +12,7 @@ export default function Sidebar() {
     : `${base} text-slate-300 hover:bg-white/10 hover:text-white`;
 
   return (
-    <aside className="w-72 shrink-0 border-r border-slate-800 bg-[#0a1630] px-4 py-5 text-white">
+    <aside className="hidden w-72 shrink-0 lg:block border-r border-slate-800 bg-[#0a1630] px-4 py-5 text-white">
       <div className="flex h-full flex-col">
         <div className="mb-7 rounded-2xl border border-white/10 bg-gradient-to-br from-sky-400/15 to-indigo-400/10 p-4">
           <div className="mb-2 flex items-center gap-2 text-sky-200"><Sparkles className="h-4 w-4" /><span className="text-xs font-bold uppercase tracking-[0.16em]">AI workspace</span></div>
@@ -45,3 +45,4 @@ export default function Sidebar() {
     </aside>
   );
 }
+

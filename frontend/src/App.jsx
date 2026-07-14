@@ -1,5 +1,5 @@
-﻿import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route, Navigate, NavLink } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
@@ -38,7 +38,12 @@ function AppLayout() {
       <Navbar />
       <div className="flex flex-1 overflow-hidden">
         <Sidebar />
-        <main className="flex-1 overflow-hidden bg-slate-950">
+        <div className="fixed bottom-0 left-0 right-0 z-30 flex h-16 items-center justify-around border-t border-slate-800 bg-slate-950/95 px-3 backdrop-blur lg:hidden">
+          <NavLink to="/" end className={({ isActive }) => `rounded-lg px-4 py-2 text-xs font-bold ${isActive ? 'bg-brand-500/15 text-brand-300' : 'text-slate-400'}`}>Workspace</NavLink>
+          <NavLink to="/kb" className={({ isActive }) => `rounded-lg px-4 py-2 text-xs font-bold ${isActive ? 'bg-brand-500/15 text-brand-300' : 'text-slate-400'}`}>Knowledge</NavLink>
+          <NavLink to="/manager" className={({ isActive }) => `rounded-lg px-4 py-2 text-xs font-bold ${isActive ? 'bg-brand-500/15 text-brand-300' : 'text-slate-400'}`}>Insights</NavLink>
+        </div>
+        <main className="flex-1 overflow-hidden bg-slate-950 pb-16 lg:pb-0">
           <Routes>
             {/* Dynamic Dashboard routing based on User roles */}
             <Route path="/" element={<DashboardRouter />} />
@@ -95,6 +100,7 @@ export default function App() {
     </Routes>
   );
 }
+
 
 
 
