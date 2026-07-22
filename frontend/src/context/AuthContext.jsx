@@ -44,6 +44,7 @@ export const AuthProvider = ({ children }) => {
         setUser(userProfile);
         return { success: true };
       }
+      return { success: false, message: data.message || 'Login failed.' };
     } catch (error) {
       console.error('Login error:', error);
       return {
@@ -84,6 +85,7 @@ export const AuthProvider = ({ children }) => {
         setUser(userProfile);
         return { success: true };
       }
+      return { success: false, message: data.message || 'Verification failed.' };
     } catch (error) {
       console.error('Verify Register OTP error:', error);
       return {

@@ -133,15 +133,15 @@ body { margin: 0; min-width: 320px; background: #070d1b; }
 .dashboard-readable [class*="bg-slate-900"] { background-color: #ffffff !important; }
 .dashboard-readable [class*="bg-slate-800"] { background-color: #eef2f7 !important; }
 .dashboard-readable [class*="border-slate-900"], .dashboard-readable [class*="border-slate-800"], .dashboard-readable [class*="border-slate-700"] { border-color: #d9e1ec !important; }
-.dashboard-readable [class*="text-slate-100"], .dashboard-readable [class*="text-slate-200"], .dashboard-readable [class*="text-slate-300"], .dashboard-readable [class*="text-slate-900"] { color: #172033 !important; }
+.dashboard-readable [class*="text-white"], .dashboard-readable [class*="text-slate-100"], .dashboard-readable [class*="text-slate-200"], .dashboard-readable [class*="text-slate-300"], .dashboard-readable [class*="text-slate-900"] { color: #172033 !important; }
 .dashboard-readable [class*="text-slate-400"] { color: #44536a !important; }
 .dashboard-readable [class*="text-slate-500"], .dashboard-readable [class*="text-slate-600"] { color: #65758c !important; }
 .dashboard-readable input, .dashboard-readable textarea, .dashboard-readable select { background: #fff !important; border-color: #cfd8e5 !important; color: #172033 !important; }
-.dashboard-readable .text-\[9px\] { font-size: .75rem !important; line-height: 1.1rem !important; }
-.dashboard-readable .text-\[10px\] { font-size: .8rem !important; line-height: 1.2rem !important; }
-.dashboard-readable .text-\[11px\] { font-size: .86rem !important; line-height: 1.28rem !important; }
-.dashboard-readable .text-xs { font-size: .9rem !important; line-height: 1.35rem !important; }
-.dashboard-readable .text-sm { font-size: 1rem !important; line-height: 1.5rem !important; }
+.dashboard-readable .text-\[9px\] { font-size: .8rem !important; line-height: 1.2rem !important; }
+.dashboard-readable .text-\[10px\] { font-size: .85rem !important; line-height: 1.25rem !important; }
+.dashboard-readable .text-\[11px\] { font-size: .9rem !important; line-height: 1.35rem !important; }
+.dashboard-readable .text-xs { font-size: .95rem !important; line-height: 1.45rem !important; }
+.dashboard-readable .text-sm { font-size: 1.05rem !important; line-height: 1.6rem !important; }
 
 .auth-page { background: #eef3f8 !important; color: #172033; }
 .auth-page .auth-visual { background-color: #0c1f3d !important; background-position: center !important; }
