@@ -3,7 +3,7 @@ AI_Customer_Support
 
 ## Project Overview
 
-AI Customer Support SaaS MVP is a modern, multi-tenant customer support platform built using the MERN Stack. The platform enables businesses to manage customer queries, support tickets, AI-assisted responses, knowledge bases, and support agents from a centralized dashboard.
+AI Customer Support SaaS MVP is a modern, single-tenant customer support platform built using the MERN Stack. The platform enables businesses to manage customer queries, support tickets, AI-assisted responses,Assigning the query to a right department,analysing the emotion of a query whether it is positive or neutral or frustrated, knowledge bases, and support agents from a centralized dashboard.
 
 The primary objective of this project is to build a scalable, production-ready SaaS application by following real-world software architecture, clean coding principles, REST API standards, secure authentication, and performance optimization techniques.
 
@@ -11,7 +11,7 @@ The primary objective of this project is to build a scalable, production-ready S
 
 ## Key Features
 
-- Multi-Tenant SaaS Architecture
+- Single-Tenant SaaS Architecture
 - Secure Authentication & Authorization (JWT + RBAC)
 - AI Assisted Customer Support
 - Ticket Management System
@@ -34,7 +34,7 @@ The primary objective of this project is to build a scalable, production-ready S
 - Tailwind CSS
 - React Router
 - Axios
-- TanStack Query *(Planned)*
+
 
 ### Backend
 - Node.js
@@ -44,8 +44,7 @@ The primary objective of this project is to build a scalable, production-ready S
 - JWT Authentication
 
 ### Deployment
-- Docker *(Planned)*
-- AWS / Render *(Planned)*
+-  Render *(Planned)*
 
 
 ## Project Status
@@ -72,12 +71,6 @@ This project is being developed module by module following enterprise software d
 
 
 ##  Future Enhancements
-
-- AI Chatbot
 - Real-Time Chat
 - Email Integration
-- Redis Caching
-- Docker Deployment
-- CI/CD Pipeline
-- AWS Deployment
 - Monitoring & Logging
