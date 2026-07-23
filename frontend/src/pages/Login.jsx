@@ -84,13 +84,13 @@ export default function Login() {
   const fillTestCredentials = (role) => {
     if (role === 'customer') {
       setEmail('customer@example.com');
-      setPassword('password123');
+      setPassword('');
     } else if (role === 'agent') {
       setEmail('agent@example.com');
-      setPassword('password123');
+      setPassword('');
     } else if (role === 'admin') {
       setEmail('admin@example.com');
-      setPassword('password123');
+      setPassword('');
     }
   };
 
