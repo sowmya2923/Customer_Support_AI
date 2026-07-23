@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  // Use VITE_API_URL environment variable if it exists (for deployment), otherwise fallback to '/api'
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  // Hardcoded to deployed backend URL to prevent 404 routing errors on Render
+  baseURL: 'https://customer-support-ai-oapw.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },

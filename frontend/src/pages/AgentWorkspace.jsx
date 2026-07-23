@@ -355,7 +355,7 @@ export default function AgentWorkspace() {
         <div className="p-4 border-b border-slate-900 bg-slate-950/85 space-y-3">
           <h2 className="text-sm font-extrabold text-white uppercase tracking-wide">Agent Workspace Queue</h2>
           
-          <div className="grid grid-cols-2 gap-1 rounded-xl bg-slate-900 p-1 border border-slate-800 shadow-inner sm:grid-cols-5">
+          <div className="flex flex-wrap gap-1.5 bg-slate-900/50 p-1.5 rounded-xl border border-slate-800/80 shadow-inner">
             {['', 'ai-reviewed', 'assigned', 'in-progress', 'resolved'].map((status) => (
               <button
                 key={status ? status.replace('-', ' ') : 'active'}
@@ -363,10 +363,10 @@ export default function AgentWorkspace() {
                   setStatusFilter(status);
                   setSelectedTicketId(null);
                 }}
-                className={`min-h-[44px] min-w-0 px-1 py-1.5 text-[10px] font-bold uppercase leading-tight tracking-wide rounded-lg cursor-pointer transition-all ${
+                className={`px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-widest rounded-lg cursor-pointer transition-all ${
                   statusFilter === status
-                    ? 'bg-slate-800 text-brand-400 border border-slate-800 shadow-sm font-extrabold'
-                    : 'text-slate-500 hover:text-slate-300'
+                    ? 'bg-slate-800 text-brand-400 border border-slate-700 shadow-sm'
+                    : 'bg-transparent text-slate-500 hover:text-slate-300 hover:bg-slate-800/50 border border-transparent'
                 }`}
               >
                 {status ? status.replace('-', ' ') : 'active'}
