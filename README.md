@@ -34,6 +34,7 @@ The primary objective of this project is to build a scalable, production-ready S
 - Tailwind CSS
 - React Router
 - Axios
+- TanStack query
 
 
 ### Backend
